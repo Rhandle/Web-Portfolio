@@ -1,0 +1,489 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap');
+
+#main {
+    margin-top: 8vh;
+}
+
+body {
+    background-color: #eb3f3f;
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    min-height: 50vh;
+}
+
+.site-text-box{
+    height: auto;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+}
+.site-text-box p{
+    text-align: center;
+    margin-left:20vw; 
+    margin-right:20vw;
+}
+
+footer {
+    background-color: rgb(156, 48, 48, 0.8);
+    font-size: 10px;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    position: relative;
+    padding: 5px 0 10px 0;
+    margin: 0 0 -100px -25px;
+    z-index: 1000;
+    justify-content: center;
+}
+
+footer.absolute {
+    position: absolute;
+    margin: 0;
+}
+
+footer .icon>a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 0 8px;
+
+}
+
+footer .icon img {
+    width: 100%;
+    height: 100%;
+}
+
+footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.menu {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 500;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.menu ul li a {
+    float: left;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 16px;
+    font: 200 arial;
+}
+
+.menu a:hover {
+    background-color: orangered;
+    color: white;
+    fill-opacity: 1;
+    transition: 1s;
+}
+
+.full {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index:1100;
+  }
+  .full .content {
+    background-color: rgba(0,0,0,0.75) !important;
+    height: 100%;
+    width: 100%;
+    display: grid;
+  }
+  .full .gallery-item{
+      z-index:-1;
+  }
+  .full .content img {
+    left: 50%;
+    position: inherit;
+    transform: translate3d(0, 0, 0);
+    animation: full 1s ease;
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+  }
+  .full .top{
+      height:30px;
+      z-index:1100;
+  }
+
+.gallery {
+    position:relative;
+    display: grid;
+    column-gap: 8px;
+    row-gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 10fr));
+    grid-auto-rows: 1fr;
+    margin: 0 150px 0 150px;
+    z-index:1;
+}
+.gallery .emptyimg{
+    background-color:rgb(54, 1, 1, 0.7);
+    width: 290px;
+    height: 330px;
+    box-shadow: 0 0 16px #333;
+    transition: all 1.5s ease;
+    border-radius: 8px;
+}
+.gallery img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 16px #333;
+    transition: all 1.5s ease;
+}
+
+.gallery img:hover {
+    box-shadow: 0 0 32px #333;
+}
+
+.gallery .content {
+    padding: 4px;
+}
+
+.gallery .gallery-item {
+    transition: grid-row-start 300ms linear;
+    transition: transform 300ms ease;
+    transition: all 0.5s ease;
+    z-index:1;
+}
+
+.gallery #showcase {
+    opacity: 0;
+    background-color: rgb(255, 255, 255, 0);
+    transition: 1s ease;
+    width: 98%;
+    animation: popup 1s ease-out;
+    transition: grid-row-start 300ms linear;
+    transition: transform 300ms ease;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.gallery #showcase .top {
+    height: 20%;
+    width: inherit;
+    background-color: rgb(51, 51, 51, 0.4);
+    top: 4px;
+    text-align: left;
+    position: absolute;
+    left: 4px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 0 32px #333;
+}
+
+
+.top .text{
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.gallery .gallery-item:hover #showcase{
+    opacity: 1;
+}
+
+.gallery .gallery-item:hover {
+    transform: scale(1.025);
+}
+
+.button {
+    background-color: darkred;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.leftcolumn {
+    text-align: left;
+    float: left;
+    width: 70%;
+    z-index: 2;
+    position: relative;
+}
+
+/* Right column */
+.rightcolumn {
+    text-align: left;
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Fake image */
+.cardimg {
+    background-color: #aaa;
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.cardimg img {
+    width: 100%;
+    border-radius: inherit;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: rgb(54, 1, 1, 0.3);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.card .post {
+    width: 100%;
+    background-color: maroon;
+    display: flex;
+    border-radius: 4px;
+}
+
+.card .post a {
+    width: inherit;
+    color: white;
+    text-decoration: none;
+    padding: 5px 0 5px 5px;
+    text-align: left;
+    border-radius: inherit;
+}
+
+.card .post a:hover {
+    background-color: orangered;
+    transition: 1s;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    z-index: 2;
+}
+
+.formcontainer {
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #82211f;
+    margin: 10px;
+    width: 30vw;
+    padding-top: 1fr;
+    position: relative;
+    z-index: 10;
+}
+
+.formgroup {
+    margin: 40px 0;
+}
+
+label {
+    text-align: left;
+    display: block;
+    padding-bottom: 4px;
+    font-size: 1em;
+}
+
+input,
+select,
+textarea {
+    float: left;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+    width: 100%;
+    padding: 8px;
+}
+
+textarea {
+    height: 20vh;
+    resize: none;
+}
+
+button {
+    margin: 10px;
+    padding: 20px;
+    background-color: orangered;
+    color: white;
+    font-size: 0.75em;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 5px;
+    border: 0;
+}
+
+button:hover {
+    background-color: indianred;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(calc(100vh + 200px));
+    }
+}
+
+@keyframes popup {
+    100%{
+        opacity: 0;
+    }
+}
+
+i {
+    animation: animate 5s linear infinite;
+}
+
+canvas {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    z-index: 1;
+}
+
+canvas.absolute {
+    position: absolute;
+}
+
+.loader-wrapper {
+    background-color: crimson;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.loader {
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    animation: loading 3s infinite ease;
+    box-shadow: 16px rgb(214, 214, 214, 0);
+}
+
+.loader-wrapper,
+.loader .hidden {
+    animation: fadeOut 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes loading {
+    0% {
+        background-color: white;
+        border-color: white;
+        box-shadow: 0 0 50px #820000;
+    }
+
+    50% {
+        background-color: #820000;
+        border-color: #820000;
+        box-shadow: 0 0 50px white;
+    }
+
+    100% {
+        background-color: white;
+        border-color: white;
+        box-shadow: 0 0 50px #820000;
+    }
+}
+
+@keyframes fadeOut {
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes full{
+    0% {
+        max-width: 50%;
+        filter: blur(4px);
+        z-index:1200;
+      }
+      30% {
+        filter: blur(4px);
+        z-index:1200;
+      }
+      70% {
+        max-width: 50%;
+        z-index:1200;
+      }
+      100% {
+        max-width: 100%;
+        z-index:1200;
+      }
+}

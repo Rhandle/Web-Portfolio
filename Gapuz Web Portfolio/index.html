@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Rhandle Soriano</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preload" href="index.js" as="script">
+</head>
+<body>
+    <canvas id="cnv"></canvas>
+    <div class="menu">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./inquiries.html">Inquiries</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <div id="main">
+            <p>I'm Rhandle, an ameteur artist based in Dubai</p>
+            <p>I mainly do portraits and character commissions</p>
+        <h1>Recent Artworks</h1>
+        <div class="gallery" id="gallery">
+            <div class="gallery-item">
+                <div class="content">
+                    <img src="./art/lanaya armor.png" alt="" />
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="content">
+                    <img src="./art/Eunice 2 edit.png" alt="" />
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="content">
+                    <img src="./art/for tom.png" alt="" />
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="content">
+                    <img src="./art/for arles.png" alt="" />
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="content">
+                    <img src="./art/for scarle.png" alt="" />
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="content">
+                    <img src="./art/The Far Flung Alchemist.png" alt="" />
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="content">
+                    <img src="./art/lanaya3.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="gallery.js"></script>
+    <script src="index.js"></script>
+    <div class="loader-wrapper" class="hidden">
+        <span class="loader"></span>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            const loader = document.querySelector('.loader-wrapper');
+            loader.className += " hidden";
+        });
+    </script>
+    <footer>
+        <p>
+            <div class="icon">
+                <a href="https://www.deviantart.com/skepticdominic"><img src="./icons/deviantart.png" style="height:45px; width: 45px" /></a>
+                <a href="#"><img src="./icons/artstation.png" /></a>
+                <a href="#"><img src="./icons/instagram.png" /></a>
+                <a href="#"><img src="./icons/twitter.png" /></a>
+            </div>
+        </p>
+        <p class="copyright">© 2022 | All Rights Reserved</p>
+        
+    </footer>
+    
+</body>
+</html>
